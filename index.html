@@ -434,8 +434,6 @@ https://templatemo.com/tm-571-hexashop
         function fillData(divClassName,jsonProducts){
             divClassName = '.owl-carousel.'+divClassName;
             $(divClassName).html(''); //clear the listing element if needed
-	    alert(divClassName);
-	    alert(jsonProducts);
             $.each(jsonProducts, function(index, product) {
             // build item block
             var htmlString = '<div class="item">';
@@ -447,7 +445,6 @@ https://templatemo.com/tm-571-hexashop
             htmlString += '<span>Rs '+product.price+'</span>';
             htmlString += '</div>';
             htmlString += '</div>';
-		alert(htmlString);
             $(divClassName).append(htmlString); //add the current content to existing one
 
             $(divClassName).trigger('destroy.owl.carousel');
