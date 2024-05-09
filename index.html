@@ -362,11 +362,11 @@ https://templatemo.com/tm-571-hexashop
 		dataType: "text",
                 success: function (csvText) {
                     var items = csvToJSON(csvText)
-			alert(items);
+			alert(JSON.stringify(items));
                     var itemsMen = $.grep(items, function(v) {
                                         return v.category==='men';
                                             });
-			alert(itemsMen);
+			alert(JSON.stringify(itemsMen));
                     var itemsWomen = $.grep(items, function(v) {
                                         return v.category==='women';
                                             });
