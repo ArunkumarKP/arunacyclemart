@@ -362,9 +362,11 @@ https://templatemo.com/tm-571-hexashop
 		dataType: "text",
                 success: function (csvText) {
                     var items = csvToJSON(csvText)
+			alert(items);
                     var itemsMen = $.grep(items, function(v) {
                                         return v.category==='men';
                                             });
+			alert(itemsMen);
                     var itemsWomen = $.grep(items, function(v) {
                                         return v.category==='women';
                                             });
@@ -406,7 +408,7 @@ https://templatemo.com/tm-571-hexashop
         
 
         function csvToJSON(csvText, quoteChar = '"', delimiter = ',') {
-            var rows=csvText.split("\n");
+            var rows=csvText.split("\r\n");
             var headers=rows[0].split(",");
 
             const regex = new RegExp(`\\s*(${quoteChar})?(.*?)\\1\\s*(?:${delimiter}|$)`, 'gs');
