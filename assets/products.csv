@@ -1,0 +1,29 @@
+﻿id,name,category,brand,price
+men_01,Hero MIG 26T,men,Hero,6500
+men_02,Vixen S 24T,men,Vixen,6000
+men_03,Actino FORCE BMX RX 900 26T,men,Actino,6500
+men_04,Hawk 21 speed 26T,men,Hawk,11500
+women_01,Hawk Pretty Women 26T,women,Hawk,6500
+women_02,Vixen Daisy 26T,women,Vixen,6500
+women_03,Hawk Scarlet 26T,women,Hawk,6500
+women_04,Neelam Easy Rider 26T ,women,Neelam,6000
+kids_01,Vixen Charlie 16T,kids,Vixen,4000
+kids_02,Actino Trendy 14T,kids,Actino,3500
+kids_03,Harman Rider 12T,kids,Harman,3200
+kids_04,Samstar Snoopy 14T,kids,Samstar,3500
+accessory_01,Igloo head light with horn (Battery),accessory,Igloo,250
+accessory_02,Igloo Head light with horn (Chargable),accessory,Igloo,350
+accessory_03,Allwyn Cycle Helmet,accessory,Allwyn,350
+accessory_04,Colorful Mudguard sets,accessory,,150
+accessory_05,Front Basket (Silver color),accessory,,250
+accessory_06,Kids Cycle Basket,accessory,,120
+accessory_07,Number Lock,accessory,,130
+accessory_08,Wire Lock,accessory,,70
+accessory_09,Pump (China),accessory,,140
+accessory_10,Pump (India),accessory,,320
+accessory_11,Foot Pump,accessory,,850
+accessory_12,Baby Chair,accessory,,200
+accessory_13,Baby Seat,accessory,,70
+accessory_14,Baby Footers,accessory,,70
+accessory_15,Horn,accessory,,20
+accessory_16,Danger Light,accessory,,5
