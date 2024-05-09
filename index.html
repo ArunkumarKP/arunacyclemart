@@ -359,6 +359,7 @@ https://templatemo.com/tm-571-hexashop
                 $.ajax({
                 url: "assets/products.csv",
                 async: false,
+		dataType: "text",
                 success: function (csvText) {
                     var items = csvToJSON(csvText)
                     var itemsMen = $.grep(items, function(v) {
@@ -377,8 +378,7 @@ https://templatemo.com/tm-571-hexashop
                     fillData('owl-men-item',itemsMen);
                     fillData('owl-kid-item',itemsKids);
                     fillData('owl-accessory-item',itemsAccesory);
-                },
-                dataType: "text",
+                }, 
                 complete: function () {
                     // call a function on complete 
                     $('.owl-carousel').find('.owl-nav').removeClass('disabled');
