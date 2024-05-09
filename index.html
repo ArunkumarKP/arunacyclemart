@@ -355,6 +355,39 @@ https://templatemo.com/tm-571-hexashop
     <script src="assets/js/custom.js" type="text/javascript"></script>
 
     <script type="text/javascript">
+        $( document ).ready(function() {
+                $.ajax({
+                url: "assets/products.csv",
+                async: false,
+                success: function (csvText) {
+                    var items = csvToJSON(csvText)
+                    var itemsMen = $.grep(items, function(v) {
+                                        return v.category==='men';
+                                            });
+                    var itemsWomen = $.grep(items, function(v) {
+                                        return v.category==='women';
+                                            });
+                    var itemsKids = $.grep(items, function(v) {
+                                        return v.category==='kids';
+                                            });
+                    var itemsAccesory = $.grep(items, function(v) {
+                                        return v.category==='accessory';
+                                            });
+                    fillData('owl-women-item',itemsWomen);
+                    fillData('owl-men-item',itemsMen);
+                    fillData('owl-kid-item',itemsKids);
+                    fillData('owl-accessory-item',itemsAccesory);
+                },
+                dataType: "text",
+                complete: function () {
+                    // call a function on complete 
+                    $('.owl-carousel').find('.owl-nav').removeClass('disabled');
+                    $('.owl-carousel').on('changed.owl.carousel', function(event) {
+                        $(this).find('.owl-nav').removeClass('disabled');
+                    });
+            }
+            });
+        });
 
         $(function() {
             var selectedClass = "";
@@ -370,37 +403,7 @@ https://templatemo.com/tm-571-hexashop
             });
         });
 
-        $.ajax({
-            url: "assets/products.csv",
-            async: false,
-            success: function (csvText) {
-                var items = csvToJSON(csvText)
-                var itemsMen = $.grep(items, function(v) {
-                                     return v.category==='men';
-                                        });
-                var itemsWomen = $.grep(items, function(v) {
-                                     return v.category==='women';
-                                        });
-                var itemsKids = $.grep(items, function(v) {
-                                     return v.category==='kids';
-                                        });
-                var itemsAccesory = $.grep(items, function(v) {
-                                     return v.category==='accessory';
-                                        });
-                fillData('owl-women-item',itemsWomen);
-                fillData('owl-men-item',itemsMen);
-                fillData('owl-kid-item',itemsKids);
-                fillData('owl-accessory-item',itemsAccesory);
-            },
-            dataType: "text",
-            complete: function () {
-                // call a function on complete 
-                $('.owl-carousel').find('.owl-nav').removeClass('disabled');
-                $('.owl-carousel').on('changed.owl.carousel', function(event) {
-                    $(this).find('.owl-nav').removeClass('disabled');
-                });
-          }
-        });
+        
 
         function csvToJSON(csvText, quoteChar = '"', delimiter = ',') {
             var rows=csvText.split("\r\n");
