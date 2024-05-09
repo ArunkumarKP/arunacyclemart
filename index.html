@@ -358,10 +358,8 @@ https://templatemo.com/tm-571-hexashop
         $( document ).ready(function() {
                 $.ajax({
                 url: "assets/products.csv",
-		dataType: "text",
                 async: false,
                 success: function (csvText) {
-			alert(csvText);
                     var items = csvToJSON(csvText)
                     var itemsMen = $.grep(items, function(v) {
                                         return v.category==='men';
@@ -445,7 +443,7 @@ https://templatemo.com/tm-571-hexashop
             htmlString += '<span>Rs '+product.price+'</span>';
             htmlString += '</div>';
             htmlString += '</div>';
-
+		alert(htmlString);
             $(divClassName).append(htmlString); //add the current content to existing one
 
             $(divClassName).trigger('destroy.owl.carousel');
