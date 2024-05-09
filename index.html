@@ -420,7 +420,7 @@ https://templatemo.com/tm-571-hexashop
             var lines = csvText.split('\r\n');
             const heads = headers ?? match(lines.shift());
             lines = lines.slice(1);
-            
+            alert(JSON.stringify(lines));
             return lines.map(line => {
             return match(line).reduce((acc, cur, i) => {
                 // replace blank matches with `null`
