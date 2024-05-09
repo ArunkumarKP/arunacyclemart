@@ -358,6 +358,7 @@ https://templatemo.com/tm-571-hexashop
         $( document ).ready(function() {
                 $.ajax({
                 url: "assets/products.csv",
+		dataType: "text",
                 async: false,
                 success: function (csvText) {
                     var items = csvToJSON(csvText)
