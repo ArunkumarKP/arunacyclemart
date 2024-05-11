@@ -445,8 +445,23 @@ https://templatemo.com/tm-571-hexashop
             $(divClassName).append(htmlString); //add the current content to existing one
 
             $(divClassName).trigger('destroy.owl.carousel');
-            $(divClassName).owlCarousel(); 
-            });
+            $(divClassName).owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,
+                responsive:{
+                        0:{
+                            items:1
+                        },
+                        600:{
+                            items:3
+                        },
+                        992:{
+                            items:4
+                        },
+                    }
+                });   
+            }); 
         }
             
 
